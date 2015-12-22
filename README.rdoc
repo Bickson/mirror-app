@@ -1,5 +1,5 @@
 == Welcome to my attempt to make an smart mirror
 
-Inspiration and help from: [@kimf](https://github.com/kimf) and [@Agowan](https://github.com/Agowan)
+Inspiration and help from: kimf@https://github.com/kimf and Agowan@https://github.com/Agowan
 
 The basic idea of widget structure: link:https://gist.github.com/Bickson/6f2af9e6b55c6952ff79
