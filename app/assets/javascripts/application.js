@@ -13,3 +13,22 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+// $('#time_widget').ready( function(e) {
+//   setTimeout(function(){
+//     fetchWidgret();
+//   }, 1000);
+// });
+$(document).ready(function(){
+  fetchWidgret();
+});
+
+var fetchWidgret = function(){
+  $.ajax('/view/time_widget').success(function(data){
+    console.log("fetching time");
+    $("#time_widget").html(data);
+    setTimeout( function(){
+      fetchWidgret();
+    }, 1000);
+  });
+};
