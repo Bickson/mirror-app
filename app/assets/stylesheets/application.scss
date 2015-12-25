@@ -24,7 +24,6 @@ html body{
   box-sizing:border-box;
 }
 
-
 body {
   font: 100% $font-stack;
   color: $primary-color;
@@ -36,7 +35,7 @@ hr {
 }
 
 .top_row {
-  width: 100vw;
+
 }
 
 
@@ -60,7 +59,7 @@ hr {
 #weather_icon {
   border: 1px solid white;
   width: 20%;
-  float: right;
+  float:right;
 }
 
 #weather_icon * {
@@ -68,6 +67,10 @@ hr {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#weather_list{
+  margin-left: -50px;
 }
 
 img {

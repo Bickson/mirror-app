@@ -13,4 +13,9 @@ class ViewController < ApplicationController
     render layout: false
   end
 
+  def weather_widget
+    @list = Forecast.new.list
+    render layout: false
+  end
+
 end

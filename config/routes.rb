@@ -51,6 +51,7 @@ MirrorApp::Application.routes.draw do
   resources :view do
     collection do
       get 'time_widget'
+      get 'weather_widget'
     end
   end
 

@@ -21,6 +21,7 @@
 // });
 $(document).ready(function(){
   fetchWidgret();
+  fetchWeather();
 });
 
 var fetchWidgret = function(){
@@ -30,5 +31,15 @@ var fetchWidgret = function(){
     setTimeout( function(){
       fetchWidgret();
     }, 1000);
+  });
+};
+var ThreeHoures = 10800000
+var fetchWeather = function(){
+  $.ajax('/view/weather_widget').success(function(data){
+    console.log("fetching weather");
+    $("#weather_list").html(data);
+    setTimeout( function(){
+      fetchWeather();
+    }, ThreeHoures);
   });
 };

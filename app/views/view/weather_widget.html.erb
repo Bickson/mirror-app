@@ -1,0 +1,6 @@
+<ul>
+<% @list.each do |item| %>
+<li><%= item.desc%></li>
+<li><%= image_tag item.icon+'.png' %></li>
+<% end %>
+</ul>
