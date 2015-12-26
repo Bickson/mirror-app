@@ -10,8 +10,20 @@ Weather api: http://openweathermap.org/api
 
 Depature api: https://www.trafiklab.se/api/sl-realtidsinformation-3
 
+==== Weather
+Shows current, tomorrow morning, tomorrow afternoon, 2 days from now morning and afternoons weather in Stockholm.
+
+==== Departure
+Depatures will only be visable between 08:00 and 10:00.
+
+Shows depatures from Bandhagen, Stockholm.
+
+Metro: Towards Stockholm city.
+
+Buses: Towards Älvjö station.
+
 == Deployment
 
-Currently up and running on heroku: link:spegel.herokuapp.com
+Currently up and running on heroku: http://spegel.herokuapp.com
 
-Depature time will only be visable between 08:00 and 10:00
+
