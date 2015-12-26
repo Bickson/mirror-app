@@ -70,7 +70,6 @@ span{
   font-weight: normal;
 }
 
-
 #weather {
   //border: 1px solid white;
   float:right;
@@ -109,6 +108,18 @@ span{
   font-size: 100%;
   font-weight: normal;
 }
+
+div .windDir{
+  //border: 1px solid white;
+  font-size: 150%;
+  text-align: center;
+  //float:left;
+  width: 30px;
+  padding-top: 5px;
+  position:fixed;
+  margin:-10px;
+}
+
 
 #depatures {
   //border: 1px solid white;
@@ -150,5 +161,57 @@ span{
 }
 
 table, tr, th,td {
- //border: 1px solid grey;
+  //border: 1px solid grey;
+}
+
+
+// WIND DIRECTIONS
+
+div #N{
+  transform: rotate(0deg);
+}
+div #NNE{
+  transform: rotate(23deg);
+}
+div #NE{
+  transform: rotate(45deg);
+}
+div #ENE{
+  transform: rotate(68deg);
+}
+div #E{
+  transform: rotate(90deg);
+}
+div #ESE{
+  transform: rotate(113deg);
+}
+div #SE{
+  transform: rotate(135deg);
+}
+div #SSE{
+  transform: rotate(158deg);
+}
+div #S{
+  transform: rotate(180deg);
+}
+div #SSW{
+  transform: rotate(203deg);
+}
+div #SW{
+  transform: rotate(225deg);
+}
+div #WSW{
+  transform: rotate(248deg);
+}
+div #W{
+  transform: rotate(270deg);
+}
+div #WNW{
+  transform: rotate(293deg);
+}
+div #NW{
+  transform: rotate(315deg);
+}
+div #NNW{
+  transform: rotate(338deg);
 }

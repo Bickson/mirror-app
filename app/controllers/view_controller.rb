@@ -25,15 +25,15 @@ class ViewController < ApplicationController
   end
 
   def depature_widget
-    @buses = []
-    @metros = []
-    if DateTime.now.hour >= ENV['START_HOUR'].to_i && DateTime.now.hour < ENV['STOP_HOUR'].to_i
+    #@buses = []
+    #@metros = []
+    #if DateTime.now.hour >= ENV['START_HOUR'].to_i && DateTime.now.hour < ENV['STOP_HOUR'].to_i
       @bus_h2 = "Buses"#"Bussar"
       @metro_h2 = "Metro"#"Tunnelbana"
       @depatures = Depature.new
       @buses = @depatures.buses
       @metros = @depatures.metros.select{ |m| m["JourneyDirection"] == 1} #only towards the city
-    end
+    #end
     render layout: false
   end
 

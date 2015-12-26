@@ -14,7 +14,12 @@
   <tr>
     <th rowspan="1"><%= image_tag @current.icon+'.png' %></th>
     <th><%= @current.temp.to_i %>°</th>
-    <td><%= @current.desc %></td>
+    <td><%= @current.desc %><br/>
+      <span style="font-weight:lighter;"><%= @current.wind_dir %></span>
+      <div class="windDir" id="<%= @current.wind_dir %>">
+        &#8593
+      </div>
+    </td>
   </tr>
 </table>
 
