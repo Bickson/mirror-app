@@ -53,6 +53,6 @@ var fetchDepatures = function(){
     $("#depatures").html(data);
     setTimeout( function(){
       fetchDepatures();
-    }, 6000);
+    }, 30000);
   });
 };

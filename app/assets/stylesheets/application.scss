@@ -12,7 +12,7 @@
  *= require_tree .
  */
 
-$font-stack:  "Apple SD Gothic Neo",Helvetica, sans-serif;
+$font-stack:  "Avenir Next","Apple SD Gothic Neo",Helvetica, sans-serif;
 $primary-color: white;
 $bg-color: #000;
 
@@ -73,7 +73,6 @@ span{
 
 #weather {
   //border: 1px solid white;
-  width: 30%;
   float:right;
   padding-right: 50px;
 }
@@ -96,11 +95,18 @@ span{
   float:right;
 }
 #current {
-  float:right;
+  padding:0px;
+  margin: 0px;
 }
 
 #current th{
-  font-size: 100px;
+  padding: 0px;
+  font-size: 50px;
+  font-weight: normal;
+}
+
+#current td{
+  font-size: 100%;
   font-weight: normal;
 }
 
@@ -141,4 +147,8 @@ span{
 .metros{
   float:left;
   padding-left: 20px;
+}
+
+table, tr, th,td {
+ //border: 1px solid grey;
 }

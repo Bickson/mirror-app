@@ -6,7 +6,7 @@
 
 <%#= @metros.inspect %>
 <div class="buses">
-  <h2>Bussar</h2>
+  <h2><%= @bus_h2 %></h2>
   <table>
   <% @buses[0..2].each do |b| %>
   <tr>
@@ -14,14 +14,14 @@
     <td style="border-bottom: 1px solid grey;"><span><%= b["DisplayTime"] %></span></td>
   </tr>
   <tr>
-    <td>mot <%= b["Destination"] %></td>
+    <td style="color: lightgrey;">towards <%= b["Destination"] %></td>
   </tr>
   <% end %>
   </table>
 </div>
 
 <div class="metros">
-  <h2>Tunnelbana</h2>
+  <h2><%= @metro_h2 %></h2>
   <table>
   <% @metros[0..2].each do |m| %>
   <tr>
@@ -29,7 +29,7 @@
     <td style="border-bottom: 1px solid grey;"><span><%= m["DisplayTime"] %></span></td>
   </tr>
   <tr>
-    <td>mot <%= m["SafeDestinationName"] %></td>
+    <td style="color: lightgrey;">towards <%= m["SafeDestinationName"] %></td>
   </tr>
   <% end %>
   </table>

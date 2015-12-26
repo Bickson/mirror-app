@@ -12,22 +12,32 @@
 
 <table id="current">
   <tr>
-    <th rowspan="2"><%= image_tag @current.icon+'.png' %></th>
-    <th> <%= @current.temp.to_i %>°</th>
-  </tr>
-  <tr>
-    <td></td>
+    <th rowspan="1"><%= image_tag @current.icon+'.png' %></th>
+    <th><%= @current.temp.to_i %>°</th>
+    <td><%= @current.desc %></td>
   </tr>
 </table>
 
 <di id="weather_list">
   <table>
-  <% @list.each do |item| %>
+  <% @list[0..1].each do |item| %>
     <tr>
       <th rowspan="2"><%= image_tag item.icon+'.png' %></th>
       <td style="border-bottom: 1px solid grey;">
-        <%= item.date.strftime('%H:%M') %>
-        <%= item.date.strftime('%a') %>
+        Tomorrow <%= item.date.hour == 18 ? "afternoon" : "morning" %>
+        <span><%= item.date.strftime('%e') %></span>
+        <%= item.date.strftime('%b') %>
+      </td>
+    <tr>
+      <td> <%= item.desc %> <span><%= item.temp.to_i.to_s %>°</span> <%= item.wind_dir %></td>
+    </tr >
+  <% end %>
+  <% @list[2..3].each do |item| %>
+    <tr>
+      <th rowspan="2"><%= image_tag item.icon+'.png' %></th>
+      <td style="border-bottom: 1px solid grey;">
+        <%= item.date.strftime('%A') %>
+        <%= item.date.hour == 18 ? "afternoon" : "morning" %>
         <span><%= item.date.strftime('%e') %></span>
         <%= item.date.strftime('%b') %>
       </td>
