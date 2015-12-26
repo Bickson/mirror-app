@@ -23,7 +23,7 @@ class Forecast
   end
 
   def fetch_json
-    source = "http://api.openweathermap.org/data/2.5/forecast?q=stockholm&units=metric&APPID=3b469cf40bdcb8533020c9b5c25cdda9"
+    source = "http://api.openweathermap.org/data/2.5/forecast?q=stockholm&units=metric&APPID=#{ENV['WEATHER_API_KEY']}"
     response = Net::HTTP.get_response(URI.parse(source))
     data = response.body
     result = JSON.parse(data)
