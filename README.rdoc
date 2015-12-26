@@ -1,4 +1,4 @@
-== Welcome to my attempt to make an smart mirror
+== Welcome to my attempt to make a magic mirror
 
 Inspiration and help from: kimf@https://github.com/kimf and Agowan@https://github.com/Agowan
 

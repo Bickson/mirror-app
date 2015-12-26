@@ -24,6 +24,8 @@ $(document).ready(function(){
   fetchWeather();
 });
 
+var threeHoures = 10800000
+
 var fetchWidgret = function(){
   $.ajax('/view/time_widget').success(function(data){
     console.log("fetching time");
@@ -33,13 +35,13 @@ var fetchWidgret = function(){
     }, 1000);
   });
 };
-var ThreeHoures = 10800000
+
 var fetchWeather = function(){
   $.ajax('/view/weather_widget').success(function(data){
     console.log("fetching weather");
-    $("#weather_list").html(data);
+    $("#weather").html(data);
     setTimeout( function(){
       fetchWeather();
-    }, ThreeHoures);
+    }, threeHoures);
   });
 };

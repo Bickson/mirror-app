@@ -36,15 +36,13 @@ class Forecast
       array << ListObj.new(
                       cast["weather"].first["icon"],
                       cast["weather"].first["description"],
-                      cast["dt_txt"],
+                      DateTime.parse(cast["dt_txt"]),
                       cast["main"]["temp"],
                       direction(cast["wind"]["deg"])
                       )
     end
     array
   end
-
-
 
   #=======================================================================#
   #======================= Data sanitize methods =========================#

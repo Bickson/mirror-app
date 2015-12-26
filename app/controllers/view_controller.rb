@@ -7,14 +7,20 @@ class ViewController < ApplicationController
   end
 
   def time_widget
-    @time = Time.now.strftime('%T')
-    @date = Time.now.strftime('%Y-%m-%d')
+    @time = Time.now.strftime('%H:%M')
+    @date = Time.now
     #render :file => "/view/time_widget"
     render layout: false
   end
 
   def weather_widget
-    @list = Forecast.new.list
+    @forecast = Forecast.new
+    @current = @forecast.list.first
+    #to get all next day
+    @list = @forecast.list.select{|f| f.date >= @forecast.list.first.date.beginning_of_day.next_day}
+
+    #filter kl 09 and kl 18
+    @list = @list.select{|f| f.date.hour == 9 || f.date.hour == 18}
     render layout: false
   end
 

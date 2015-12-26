@@ -1,6 +1,39 @@
-<ul>
+
+
+<!--<ul>
 <% @list.each do |item| %>
-<li><%= item.desc%></li>
-<li><%= image_tag item.icon+'.png' %></li>
+<li><%= image_tag item.icon+'.png' %><%= item.icon %></li>
+<li> <%= item.desc + " " + item.temp.to_s + " " + item.wind_dir + " " + item.date.strftime('%D') %> </li>
 <% end %>
 </ul>
+
+<h2>Weather</h2>
+<hr style="width: 50%"/>-->
+
+<table id="current">
+  <tr>
+    <th rowspan="2"><%= image_tag @current.icon+'.png' %></th>
+    <th> <%= @current.temp.to_i %>°</th>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+</table>
+
+<di id="weather_list">
+  <table>
+  <% @list.each do |item| %>
+    <tr>
+      <th rowspan="2"><%= image_tag item.icon+'.png' %></th>
+      <td style="border-bottom: 1px solid grey;">
+        <%= item.date.strftime('%H:%M') %>
+        <%= item.date.strftime('%a') %>
+        <span><%= item.date.strftime('%e') %></span>
+        <%= item.date.strftime('%b') %>
+      </td>
+    <tr>
+      <td> <%= item.desc %> <span><%= item.temp.to_i.to_s %>°</span> <%= item.wind_dir %></td>
+    </tr >
+  <% end %>
+  </table>
+</div>
