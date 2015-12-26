@@ -1,5 +1,4 @@
 class ViewController < ApplicationController
-  #layout proc {|controller| controller.request.xhr? ? false: "application" }
 
   def index
     @msg = "hello"
@@ -7,9 +6,8 @@ class ViewController < ApplicationController
   end
 
   def time_widget
-    @time = Time.now.strftime('%H:%M')
-    @date = Time.now
-    #render :file => "/view/time_widget"
+    @date = Time.now + 1.hour #to fit timezone on heroku
+    @time = @date.strftime('%H:%M')
     render layout: false
   end
 
