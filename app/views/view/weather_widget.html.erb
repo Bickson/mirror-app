@@ -13,8 +13,8 @@
 <table id="current">
   <tr>
     <th rowspan="1"><%= image_tag @current.icon+'.png' %></th>
-    <th><%= @current.temp.to_i %>°</th>
-    <td><%= @current.desc %><br/>
+    <th style="padding-bottom: 30px; padding-right:10px;" ><%= @current.temp.to_i %>°</th>
+    <td style="padding-bottom: 40px;"><%= @current.desc %><br/>
       <span style="font-weight:lighter;"><%= @current.wind_dir %></span>
       <div class="windDir" id="<%= @current.wind_dir %>">
         &#8593
