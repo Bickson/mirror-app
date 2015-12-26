@@ -52,6 +52,7 @@ MirrorApp::Application.routes.draw do
     collection do
       get 'time_widget'
       get 'weather_widget'
+      get 'depature_widget'
     end
   end
 

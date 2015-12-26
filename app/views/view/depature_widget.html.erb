@@ -1,0 +1,36 @@
+
+<%#= @depatures.inspect %>
+
+
+<%#= @buses.inspect %>
+
+<%#= @metros.inspect %>
+<div class="buses">
+  <h2>Bussar</h2>
+  <table>
+  <% @buses[0..2].each do |b| %>
+  <tr>
+    <td rowspan="2"><span id="lineNumber"><%= b["LineNumber"] %></span></td>
+    <td style="border-bottom: 1px solid grey;"><span><%= b["DisplayTime"] %></span></td>
+  </tr>
+  <tr>
+    <td>mot <%= b["Destination"] %></td>
+  </tr>
+  <% end %>
+  </table>
+</div>
+
+<div class="metros">
+  <h2>Tunnelbana</h2>
+  <table>
+  <% @metros[0..2].each do |m| %>
+  <tr>
+    <td rowspan="2"><span id="lineNumber"><%= m["LineNumber"] %></span></td>
+    <td style="border-bottom: 1px solid grey;"><span><%= m["DisplayTime"] %></span></td>
+  </tr>
+  <tr>
+    <td>mot <%= m["SafeDestinationName"] %></td>
+  </tr>
+  <% end %>
+  </table>
+</div>

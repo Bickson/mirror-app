@@ -32,17 +32,16 @@ body {
 }
 
 hr {
-  margin-top: -15px;
+  margin-top: -20px;
 }
 
 #time_widget{
-  border: 1px solid white;
-  width: 30%;
+  //border: 1px solid white;
   float: left;
 }
 
 #time_widget *{
-  margin-left: 20%;
+  margin-left: 70px;
   font-weight: normal;
 }
 
@@ -73,7 +72,7 @@ span{
 
 
 #weather {
-  border: 1px solid white;
+  //border: 1px solid white;
   width: 30%;
   float:right;
   padding-right: 50px;
@@ -103,4 +102,43 @@ span{
 #current th{
   font-size: 100px;
   font-weight: normal;
+}
+
+#depatures {
+  //border: 1px solid white;
+  padding-left: 70px;
+  position:fixed;
+  top:75%;
+  float: left;
+}
+
+#lineNumber{
+  padding: 4px;
+  padding-bottom: 0px;
+  //border: 1px solid grey;
+  font-weight: normal;
+  font-size: 120%;
+}
+
+.buses #lineNumber{
+  border-left: 3px solid blue;
+}
+
+.metros #lineNumber {
+  border-left: 3px solid green;
+}
+
+#depatures h2 {
+  letter-spacing: 2px;
+  //border-bottom: 1px solid grey;
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+
+.buses{
+  float:left;
+}
+.metros{
+  float:left;
+  padding-left: 20px;
 }

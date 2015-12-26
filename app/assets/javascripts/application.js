@@ -22,6 +22,7 @@
 $(document).ready(function(){
   fetchWidgret();
   fetchWeather();
+  fetchDepatures();
 });
 
 var threeHoures = 10800000
@@ -43,5 +44,15 @@ var fetchWeather = function(){
     setTimeout( function(){
       fetchWeather();
     }, threeHoures);
+  });
+};
+
+var fetchDepatures = function(){
+  $.ajax('/view/depature_widget').success(function(data){
+    console.log("fetching depatures");
+    $("#depatures").html(data);
+    setTimeout( function(){
+      fetchDepatures();
+    }, 6000);
   });
 };

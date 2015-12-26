@@ -24,4 +24,11 @@ class ViewController < ApplicationController
     render layout: false
   end
 
+  def depature_widget
+    @depatures = Depature.new
+    @buses = @depatures.buses
+    @metros = @depatures.metros.select{ |m| m["JourneyDirection"] == 1} #only towards the city
+    render layout: false
+  end
+
 end
