@@ -10,7 +10,11 @@
   <table>
   <% @buses[0..2].each do |b| %>
   <tr>
-    <td rowspan="2"><span id="lineNumber"><%= b["LineNumber"] %></span></td>
+    <% if b["LineNumber"] == "173" %>
+    <td rowspan="2"><span id="lineNumber" style="border-left: 3px solid #3333ff;"><%= b["LineNumber"] %></span></td>
+    <% else %>
+    <td rowspan="2"><span id="lineNumber" style="border-left: 3px solid #ff3333;"><%= b["LineNumber"] %></span></td>
+    <% end %>
     <td style="border-bottom: 1px solid grey;"><span><%= b["DisplayTime"] %></span></td>
   </tr>
   <tr>

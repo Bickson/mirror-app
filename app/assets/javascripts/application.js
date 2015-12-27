@@ -47,20 +47,11 @@ var fetchWeather = function(){
 };
 
 var fetchDepatures = function(){
-  var hour = new Date().getHours();
-  var timeToNext = 5000000;
-  if(hour >= 8 && hour < 10){
-    timeToNext = 30000; // every 30 sec
-    $.ajax('/view/depature_widget').success(function(data){
-      console.log("fetching depatures, next in " + timeToNext/1000 + " sec");
-      $("#depatures").html(data);
-    });
-
-  }else{
-    timeToNext = 60000; // every min
-    console.log("Not fetching depature data until 08:00, trying again in " + timeToNext/1000 + " sec");
-  }
+  $.ajax('/view/depature_widget').success(function(data){
+    console.log("fetching depatures, next in 30 sec");
+    $("#depatures").html(data);
+  });
   setTimeout( function(){
     fetchDepatures();
-  }, timeToNext);
+  }, 30000); // every 30 sec
 };
