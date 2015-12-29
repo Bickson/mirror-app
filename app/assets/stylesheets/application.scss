@@ -122,10 +122,12 @@ div .windDir{
 
 
 #depatures {
-  //border: 1px solid white;
+  border: 1px solid white;
   padding-left: 70px;
+  padding-bottom: 40px;
   position:fixed;
-  top:70%;
+  bottom: 0px;
+  //top:(100% - 100px);
   float: left;
 }
 
